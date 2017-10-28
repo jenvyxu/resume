@@ -56,3 +56,12 @@ background: gray
 .topNavBar nav ul>li>a:hover{
   border-bottom-color: #DC6465;
 }
+
+.banner{
+    height: 515px;
+    width: 100%;
+    background-image: url(./img/rs-cover.jpg);
+
+
+
+}
