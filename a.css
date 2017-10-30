@@ -4,8 +4,39 @@
     clear: both;
 
 }
+a{
+    color: indianred;
+    text-decoration: none;
+}
 body{
     background: black;
+    margin: 0px;
+}
+.topNavBar{
+    padding-top: 20px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+.topNavBar .logo{
+    font-size: 24px;
+    font-family: Noto Sans CJK KR Black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.topNavBar .logo .rs{
+    color: #e6686a;
+    margin-right: 4px;
+}
+.topNavBar .logo .card{   
+    color: #9a9da2;
+}
+.topNavBar>nav{
+    padding-top: 6px;
+    padding-bottom: 0px;
+
+
 }
 .topNavBar>nav>ul{
     list-style:none;
