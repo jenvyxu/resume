@@ -4,8 +4,9 @@
     clear: both;
 }
 h1,h2h3,h4,h5,p{
-    margin: 0px;
+    margin: 0 0 0 0;
     padding: 0px;
+
 }
 dt,dd{
     margin: 0px;
@@ -13,6 +14,11 @@ dt,dd{
 a{
     color: inherit;/*继承爸爸的颜色body，有些颜色可以继承，有些不可以*/
     text-decoration: none;
+}
+ol,ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 body{
     background: #efefef;
@@ -199,4 +205,53 @@ body >main .downloadResume:hover{
     font-family: Microsoft YaHei;
     line-height: 1.8;
     font-size: 20px;
+}
+
+section.skills,
+section.portfolio{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+
+}
+section.skills >h2,
+section.portfolio >h2{
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+}
+section.skills >ol{
+    background: white;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+    padding: 42px 50px 10px;
+
+}
+section.skills >ol>li{
+    width: 46%;
+    float: left;/*父元素高度固定，子元素可以写百分比*/
+}
+section.skills >ol>li:nth-child(even){
+    float: right;
+}
+
+section.skills .progressBar{
+    height: 5px;
+    background: #fae1e1;
+    border-radius: 2px;
+    margin: 4px 0px 40px;
+}
+section.skills .progressBar .progress{
+    background: #e6686a;
+    height:100%;
+    width: 70%;
+}
+section.skills h3{
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+    margin: 0px;
+    font-weight: normal;
 }
