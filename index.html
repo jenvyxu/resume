@@ -8,18 +8,45 @@
     <script src="//at.alicdn.com/t/font_493487_0lgy1tsh62inewmi.js"></script>
     <title>许振威的个人简历</title>
     <style type="text/css">
+        .loading{width:200px; height:200px; position: relative;}
+    .loading::before,.loading::after{ content: '';  position: absolute;  width: 0px;
+        height: 0px;  background: black;  border-radius: 50%;  top: 0;
+        left: 0;  right: 0;  bottom: 0;  margin: auto;  animation: s 1.5s linear infinite;
+    }
+    .loading::after{animation-delay:0.75s;}
+    @keyframes s{
+        0%{width: 0px; height: 0px; opacity:1;}
+        100%{width: 100px; height:100px; opacity:0;}
+    }
         .icon {
            width: 1em; height: 1em;
            vertical-align: -0.15em;
            fill: currentColor;
            overflow: hidden;
         }
+        .site-welcome{
+            display: none;
+            position: fixed;
+            top: 0;left: 0; width:100%;
+            height:100%;
+            background: grey;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+        .site-welcome.active{
+            dispay:flex;
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="topNavBar ">
-        <div class="topNavBar-inner clearfix">
+    <div id="siteWelcome" class="site-welcome">
+        <div class="loading"></div>
+    </div>
+    <div id="topNavBar" class="topNavBar">
+        <div id="topNavBar-inner" class="topNavBar-inner clearfix">
             <a class="logo" href="#" alt="logo" style="float:left">
                 <span class="rs">RS</span>
                 <span class="card">card</span>
@@ -71,7 +98,7 @@
                     <hr>
                     <dl>
                         <dt>年龄</dt>
-                        <dd>18</dd>
+                        <dd>25</dd>
                         <dt>城市</dt>
                         <dd>广州</dd>
                         <dt>邮箱</dt>
@@ -117,36 +144,38 @@
             <li>
                 <h3>HTML 5 &amp; CSS 3</h3>
                 <div class="progressBar">
-                    <div class="progress" style="width: 30%;"></div>
+                    <div class="progress" style="width: 90%;"></div>
                 </div>
             </li>
             <li>
                 <h3>JavaScript</h3>
                 <div class="progressBar">
-                    <div class="progress"></div>
+                    <div class="progress" style="width: 65%;"></div>
                 </div>
-
             </li>
             <li>
                 <h3>jQuery</h3>
                 <div class="progressBar">
-                    <div class="progress"></div>
+                    <div class="progress" style="width: 50%;"></div>
                 </div></li>
             <li>
                 <h3>Node.js</h3>
                 <div class="progressBar">
-                    <div class="progress"></div>
-                </div></li>
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </li>
             <li>
                 <h3>React.js</h3>
                 <div class="progressBar">
-                    <div class="progress"></div>
-                </div></li>
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </li>
             <li>
                 <h3>Vue.js</h3>
                 <div class="progressBar">
-                    <div class="progress"></div>
-                </div></li>
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </li>
         </ol>
     </section>
 
@@ -185,6 +214,16 @@
             </div>
         </div>
     </section>
-</body>
+    <script>
+    window.onscroll=function () {
+        if(window.scrollY>0){
+            topNavBar.classList.add('sticky');
 
+        }
+        else{
+            topNavBar.classList.remove('sticky');
+        }
+    }
+        </script>
+</body>
 </html>
