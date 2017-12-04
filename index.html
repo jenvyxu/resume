@@ -61,10 +61,20 @@
                         <a href="#">技能</a>
                     </li>
                     <li>
-                        <a href="#">作品</a>
+                        <a class="menuTigger" href="#">作品</a>
+                        <ul class="submenu">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#">博客</a>
+                        <a class="menuTigger" href="#">博客</a>
+                        <ul>
+                            <li>博客1</li>
+                            <li>博客2</li>
+                            <li>博客3</li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#">日历</a>
@@ -224,6 +234,27 @@
             topNavBar.classList.remove('sticky');
         }
     }
+    let aTags=document.getElementsByClassName('menuTigger');
+        console.log(aTags);
+        for(let i=0;i<aTags.length;i++){
+            aTags[i].onmouseenter=function(x){
+                //console.log(x.target); console.log(x.currentTarget)
+                let a=x.currentTarget
+                let brother=a.nextSibling
+                /*     while(brother.nodeType===3){//递归查询字节点是不是文本节点
+                    brother=brother.nextSibling
+                }*/
+                while(brother.tagName!=='UL'){//ul的tagNam是大写的
+                    brother=brother.nextSibling
+                }
+                console.log(brother)
+            }
+            aTags[i].onmouseleave=function(){
+                console.log('mouseleave');
+            }
+        }
+
+
         </script>
 </body>
 </html>

@@ -58,7 +58,7 @@ body{
     float: left;
     margin-left: 22px;
     margin-right: 22px;
-
+    position: relative;
 }
 .topNavBar nav>ul>li>a{
     font-size: 1px;
@@ -86,6 +86,16 @@ body{
 @keyframes menuSlide {
     0%{  width:0;  }
     100%{ width: 100%;}
+}
+.topNavBar .submenu{
+    display: none;
+    position: absolute;
+}
+.topNavBar .submenu.active{
+    display: block;
+}
+.topNavBar .submenu >li{
+    white-space: nowrap;/*防止换行*/
 }
 
 .topNavBar .logo{
