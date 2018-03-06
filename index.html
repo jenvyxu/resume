@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./a.css">
-    <!--link标签引入CSS样式,引入方式有四种-->
+    <link rel="stylesheet" href="./main.css">
     <script src="//at.alicdn.com/t/font_493487_0lgy1tsh62inewmi.js"></script>
     <title>许振威的个人简历</title>
     <style type="text/css">
-        .loading{width:200px; height:200px; position: relative;}
-    .loading::before,.loading::after{ content: '';  position: absolute;  width: 0px;
+    .loading{width:200px; height:200px; position: relative;}
+    .loading::before,.loading::after{ 
+        content: '';  position: absolute;  width: 0px;
         height: 0px;  background: black;  border-radius: 50%;  top: 0;
-        left: 0;  right: 0;  bottom: 0;  margin: auto;  animation: s 1.5s linear infinite;
-    }
+        left: 0;  right: 0;  bottom: 0;  margin: auto;  animation: s 1.5s linear infinite;}
     .loading::after{animation-delay:0.75s;}
     @keyframes s{
         0%{width: 0px; height: 0px; opacity:1;}
@@ -27,22 +25,21 @@
         .site-welcome{
             display: none;
             position: fixed;
-            top: 0;left: 0; width:100%;
+            top: 0;left: 0;
             height:100%;
+            width:100%;
             background: grey;
             z-index: 1;
             justify-content: center;
             align-items: center;
         }
         .site-welcome.active{
-            dispay:flex;
+            display:flex;
         }
-
     </style>
 </head>
-
 <body>
-    <div id="siteWelcome" class="site-welcome">
+    <div id="siteWelcome" class="site-welcome active">
         <div class="loading"></div>
     </div>
     <div id="topNavBar" class="topNavBar">
@@ -149,7 +146,6 @@
 
     </main>
     <section id="siteSkill" class="skills">
-
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -190,7 +186,7 @@
         </ol>
     </section>
 
-    <section id="siteWork" class="portfolio"><!-->
+    <section id="siteWork" class="portfolio">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -225,7 +221,12 @@
             </div>
         </div>
     </section>
+
     <script>
+        setTimeout(function(){
+            siteWelcome.classList.remove('active')
+        },2000)
+
     window.onscroll=function () {
         if(window.scrollY>0){
             topNavBar.classList.add('sticky');
