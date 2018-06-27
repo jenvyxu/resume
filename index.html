@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./main.css">
-    <script src="//at.alicdn.com/t/font_493487_0lgy1tsh62inewmi.js"></script>
+    <link rel="stylesheet" href="./works.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+
     <title>许振威的个人简历</title>
     <style type="text/css">
     .loading{width:200px; height:200px; position: relative;}
@@ -188,38 +190,25 @@
 
     <section id="siteWork" class="portfolio">
         <h2>作品集</h2>
-        <nav>
-            <ol class="clearfix">
-                <li id="portfolio1">全部</li>
-                <li id="portfolio2">框架</li>
-                <li id="portfolio3">原生JS&amp;CSS</li>
-            </ol>
-            <div id="portfolioBar" class="bar state-1">
-                <div class="bar-inner"></div>
+        <div class="works">
+
+            <div class="swiper-container">
+
+                <div class="swiper-wrapper">
+                    <img class="swiper-slide" src="./img/works/nav-page.jpg" alt="#">
+                    <img class="swiper-slide" src="./img/works/canvas.jpg" alt="#">
+                    <img class="swiper-slide" src="./img/works/slides.jpg" alt="#">
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+
+
             </div>
-        </nav>
-        <script>
-            portfolio1.onclick=function(){
-                portfolioBar.className="bar state-1";
-            }
-            portfolio2.onclick=function(){
-                portfolioBar.className="bar state-2";
-            }
-            portfolio3.onclick=function(){
-                portfolioBar.className="bar state-3";
-            }
-        </script>
-        <div class="works" style="height: 597px;">
-            <div class="big" style="top: 0px;left:0px;">
-                <img src="./img/1.jpg" alt="作品1">
-            </div>
-            <div class="small" style="top: 0px;left:645px;">
-                <img src="./img/2.jpg" alt="作品2">
-            </div>
-            <div class="small" style="top: 312px;left:645px;">
-                <img src="./img/3.jpg" alt="作品3">
-            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
         </div>
+
     </section>
 
     <script>
@@ -244,7 +233,18 @@
                 x.currentTarget.classList.remove('active')
             }
         }
+
+
         let aTags=document.querySelectorAll('nav.menu > ul > li > a')
+
+        function animate(time) {
+            requestAnimationFrame(animate);
+            TWEEN.update(time);
+        }
+        requestAnimationFrame(animate);
+
+
+
         for(let i=0;i<aTags.length;i++){
             aTags[i].onclick=function(x){
                 x.preventDefault()
@@ -252,9 +252,41 @@
                 let href=a.getAttribute('href')
                 let element=document.querySelectorAll(href)
                 let top=element[0].offsetTop  //element[0]才是一个div
-               window.scrollTo(0,top-80)
+
+                let currentTop=window.scrollY
+                let targetTop=top-80
+                let s=targetTop-currentTop
+                let t=Math.abs((s/100)*300)
+                if(t>500){t=500}
+
+                let coords = {y: currentTop }
+                let tween = new TWEEN.Tween(coords)
+                    .to({y: targetTop }, t)
+                    .easing(TWEEN.Easing.Quadratic.InOut)
+                    .onUpdate(function() {
+                        window.scrollTo(0,coords.y)
+                    })
+                    .start();
+
             }
         }
         </script>
+    <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+
+    loop: true,
+    pagination: {
+    el: '.swiper-pagination',
+    },
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    },
+
+    })
+    </script>
+    <script src="./js/Tween.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script src="//at.alicdn.com/t/font_493487_0lgy1tsh62inewmi.js"></script>
 </body>
 </html>

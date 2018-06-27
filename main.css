@@ -292,18 +292,26 @@ section.skills .progressBar{
 }
 section.skills .progressBar .progress{background: #e6686a;height:100%;width: 70%;border-radius: 2px;}
 section.skills h3{font-size: 14px;line-height: 1.1;padding-right: 40px;margin: 0px;font-weight: normal;}
-section.portfolio{text-align: center;margin-bottom: 200px;}
-section.portfolio >nav{text-align: center;display: inline-block;vertical-align: top;margin-bottom: 20px;}
-section.portfolio >nav >ol{display: inline-block;vertical-align: top;}
-section.portfolio >nav >ol >li{float: left;margin-left: 40px;cursor: pointer;}
-section.portfolio >nav >ol >li:first-child{margin-left: 0px;}
-section.portfolio >nav .bar{height: 5px;background: white;margin-top: 5px;border-radius: 2px;}
-section.portfolio >nav .bar-inner {height: 100%;background: #e6686a;border-radius: 2px;width: 20%;transition: 0.3s;/*怎么使用这个*/  }
-section.portfolio >nav .bar.state-1 .bar-inner{margin-left: 0px;width:50px;  }
-section.portfolio >nav .bar.state-2 .bar-inner{margin-left: 63px;width:50px;}
-section.portfolio >nav .bar.state-3 .bar-inner{margin-left: 144px;width:90px;  }
-section.portfolio .works{height:597px;position: relative;}
-section.portfolio .works .big,
-section.portfolio .works .small,
-section.portfolio .works .small{position: absolute;}
-
+section.portfolio{text-align: center;margin-bottom: 200px;max-width: 960px;}
+section.portfolio .swiper-container {
+    width: 720px;
+    height: 540px;
+}
+section.portfolio .swiper-button-prev,
+section.portfolio .swiper-button-next{
+    background-color: white;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    left:-50px;
+    right:auto;
+}
+section.portfolio .swiper-button-next{
+    left:auto;
+    right:-50px;
+}
+section.portfolio .works{
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
