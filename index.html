@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./works.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
     <title>许振威的个人简历</title>
     <style type="text/css">
     .loading{width:200px; height:200px; position: relative;}
@@ -94,7 +94,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div id="siteAbout" class="userCard ">
+        <div data-x id="siteAbout" class="userCard ">
             <div class="textAndPicture clearfix">
                 <div class="picture">
                     <img src="./img/avatar.jpg" alt="头像">
@@ -147,7 +147,7 @@
         </p>
 
     </main>
-    <section id="siteSkill" class="skills">
+    <section data-x id="siteSkill" class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -188,7 +188,7 @@
         </ol>
     </section>
 
-    <section id="siteWork" class="portfolio">
+    <section data-x id="siteWork" class="portfolio">
         <h2>作品集</h2>
         <div class="works">
 
@@ -201,8 +201,6 @@
                 </div>
                 <!-- 如果需要分页器 -->
                 <div class="swiper-pagination"></div>
-
-
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -214,7 +212,7 @@
     <script>
         setTimeout(function(){
             siteWelcome.classList.remove('active')
-        },2000)
+        },500)
 
     window.onscroll=function () {
         if(window.scrollY>0){
@@ -223,7 +221,34 @@
         else{
             topNavBar.classList.remove('sticky');
         }
+
+
+        let specialTags=document.querySelectorAll('[data-x]')
+        let minIndex=0
+        for(let i=1;i<specialTags.length;i++){
+            if(Math.abs(specialTags[i].offsetTop-window.scrollY)<Math.abs(specialTags[minIndex].offsetTop-window.scrollY)){
+                minIndex=i
+            }
+        }
+
+        for(let i=0;i<specialTags.length;i++){
+            specialTags[i].classList.remove('active')
+        }
+        specialTags[minIndex].classList.add('active')
+
+
+        let id=specialTags[minIndex].id
+        let a=document.querySelector('a[href="#'+id+'"]')
+        let li=a.parentNode
+        let brotherAndMe=li.parentNode.children
+        for(let i=0;i<brotherAndMe.length;i++){
+            brotherAndMe[i].classList.remove('highlight')
+        }
+        li.classList.add('highlight')
+
+
     }
+
     let liTags=document.querySelectorAll('nav.menu > ul >li')
         for(let i=0;i<liTags.length;i++){
         liTags[i].onmouseenter=function(x){
@@ -242,8 +267,6 @@
             TWEEN.update(time);
         }
         requestAnimationFrame(animate);
-
-
 
         for(let i=0;i<aTags.length;i++){
             aTags[i].onclick=function(x){

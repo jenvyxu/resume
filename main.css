@@ -75,7 +75,8 @@ body{
     display: block;/*让li包住a标签*/
     position: relative;
 }
-.topNavBar nav > ul > li.active > a::after{
+.topNavBar nav > ul > li.active > a::after,
+.topNavBar nav > ul > li.highlight > a::after{
     content: '';
     display: block;
     position: absolute;
