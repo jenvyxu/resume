@@ -41,9 +41,7 @@
     </style>
 </head>
 <body>
-    <div id="siteWelcome" class="site-welcome active">
-        <div class="loading"></div>
-    </div>
+
     <div id="topNavBar" class="topNavBar">
         <div id="topNavBar-inner" class="topNavBar-inner clearfix">
             <a class="logo" href="#" alt="logo" style="float:left">
@@ -65,7 +63,7 @@
                             <li>作品1</li>
                             <li>作品2</li>
                             <li>作品3</li>
-			    <li>作品4</li>
+			                <li>作品4</li>
                         </ul>
                     </li>
                     <li>
@@ -75,9 +73,6 @@
                             <li>博客2</li>
                             <li>博客3</li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="#">日历</a>
                     </li>
                     <li>
                         <a href="#">联系方式</a>
@@ -210,9 +205,11 @@
     </section>
 
     <script>
-        setTimeout(function(){
-            siteWelcome.classList.remove('active')
-        },500)
+        let specialTags=document.querySelectorAll('[data-x]')
+        for(let i=0;i<specialTags.length;i++){
+            specialTags[i].classList.add('offset')
+        }
+       findClosest()
 
     window.onscroll=function () {
         if(window.scrollY>0){
@@ -221,8 +218,9 @@
         else{
             topNavBar.classList.remove('sticky');
         }
-
-
+        findClosest()
+    }
+    function findClosest(){
         let specialTags=document.querySelectorAll('[data-x]')
         let minIndex=0
         for(let i=1;i<specialTags.length;i++){
@@ -236,6 +234,8 @@
         }
         specialTags[minIndex].classList.add('active')
 
+        //minIndex是离窗口顶部最近的元素
+        specialTags[minIndex].classList.remove('offset')
 
         let id=specialTags[minIndex].id
         let a=document.querySelector('a[href="#'+id+'"]')
@@ -245,8 +245,6 @@
             brotherAndMe[i].classList.remove('highlight')
         }
         li.classList.add('highlight')
-
-
     }
 
     let liTags=document.querySelectorAll('nav.menu > ul >li')
