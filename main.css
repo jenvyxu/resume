@@ -275,17 +275,17 @@ body >main .downloadResume:hover{
     line-height: 1.8;
     font-size: 20px;
 }
-
 section.skills,
-section.portfolio{
+section.portfolio,
+section.message{
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
-
 }
 section.skills >h2,
-section.portfolio >h2{
+section.portfolio >h2,
+section.message>h2{
     color: #3d4451;
     font-size: 34px;
     line-height: 1.2;
@@ -347,7 +347,9 @@ section.portfolio .works{
     position: relative;
     margin: auto;
 }
+section.message>ol{
 
+}
 [data-x].offset{
     transform: translateY(100px);
 }

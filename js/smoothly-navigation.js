@@ -56,6 +56,5 @@
         },
     }
     controller.init(view)
-    console.log(1)
 }.call()
 
