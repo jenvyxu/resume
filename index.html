@@ -2,20 +2,17 @@
 <html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./works.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <link rel="stylesheet" href="./main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
     <title>许振威的个人简历</title>
 </head>
 <body>
-
     <div id="topNavBar" class="topNavBar">
         <div id="topNavBar-inner" class="topNavBar-inner clearfix">
             <a class="logo" href="#" alt="logo" style="float:left">
-                <span class="rs">RS</span>
-                <span class="card">card</span>
-                <!--换行会产生空格，两者之存在回车-->
+                <span class="rs">Resume</span>
             </a>
             <nav class="menu" style="float:right">
                 <ul class="clearfix">
@@ -35,25 +32,14 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#siteBlog">博客</a>
-                        <ul class="submenu">
-                            <li>博客1</li>
-                            <li>博客2</li>
-                            <li>博客3</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">联系方式</a>
-                    </li>
-                    <li>
-                        <a href="#">其他</a>
+                        <a href="#comment">留言</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
 
-    <div class="banner" style="background-image:url(./img/rs-cover.jpg)">
+    <div class="banner" style="background-image:url(./img/rs-cover.png)">
         <div class="mask"></div>
     </div>
     <main>
@@ -82,19 +68,14 @@
                 </div>
             </div>
             <footer class="media">
-                <a href="https://github.com/JenvyXU">
+                <a href="https://github.com/JenvyXU" target="_blank">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-icongithub"></use>
                     </svg>
                 </a>
-                <a href="">
+                <a href="https://jenvyxu.github.io/index.html" target="_blank">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-twitter"></use>
-                    </svg>
-                </a>
-                <a href="">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-weibo"></use>
+                        <use xlink:href="#icon-blog"></use>
                     </svg>
                 </a>
             </footer>
@@ -103,8 +84,8 @@
            <a class="downloadResume" href="./resume.pdf" target="_blank" download>下载PDF简历</a><!--强制下载-->    
         </p>
         <p class="selfIntroduction">
-            许振威，前端开发工程师，
-            <br> 技能：CSS,JavaScript jQuery webpack
+            毕业于大连海事大学，本科专业通信工程，目前正在寻找合适的前端开发岗位
+            <br> 如果贵司觉得我的能力符合的要求，可以点击上面的下载PDF简历按钮，查看更加详细的信息
         </p>
 
     </main>
@@ -112,7 +93,7 @@
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
-                <h3>HTML 5 &amp; CSS 3</h3>
+                <h3>HTML 5</h3>
                 <div class="progressBar">
                     <div class="progress" style="width: 90%;"></div>
                 </div>
@@ -129,7 +110,7 @@
                     <div class="progress" style="width: 50%;"></div>
                 </div></li>
             <li>
-                <h3>Node.js</h3>
+                <h3>CSS3</h3>
                 <div class="progressBar">
                     <div class="progress" style="width: 90%;"></div>
                 </div>
@@ -152,37 +133,56 @@
         <h2>作品集</h2>
         <div id="mySlides" class="works">
             <div class="swiper-container">
-
                 <div class="swiper-wrapper">
                     <img class="swiper-slide" src="./img/works/nav-page.jpg" alt="#">
                     <img class="swiper-slide" src="./img/works/canvas.jpg" alt="#">
                     <img class="swiper-slide" src="./img/works/slides.jpg" alt="#">
                 </div>
                 <!-- 如果需要分页器 -->
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
+               <!-- <div class="swiper-pagination"></div>-->
 
+            </div>
+            <div class="swiper-button-prev">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-pre"></use>
+                </svg>
+            </div>
+            <div class="swiper-button-next">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-next"></use>
+                </svg>
+            </div>
+        </div>
     </section>
     
-    <section class="message">
+    <section data-x id="comment" class="message">
         <h2>留言</h2>
-        <ul id="messageList"></ul>
-        <form id="postMessageForm" style="width:960px;  margin: 100px auto;">
-            <label>姓名</label>
-            <input type="text" name="name">
-            <label>内容</label>
-            <input type="text" name="content">
-            <input type="submit" value="提交">
+        <form id="postMessageForm">
+            <input class="name" type="text" name="name" placeholder="昵称">
+            <textarea class="content" name="content" id="" cols="30" rows="10" placeholder="留言"></textarea>
+            <input type="submit" class="submit" value="发表">
         </form>
+        <ul id="messageList">
+            <li >
+                <div id="guest"><img src="./img/guest.jpg" alt=""></div>
+                <div class="nameAndMessage">
+                    <div class="nameAndTime">
+                        <div class="name">JenvyXU</div>
+                        <div class="time">6/8/2018 17:22:11</div>
+                    </div>
+                    <div class="inner-message">
+                        Hi!很高兴认识你...
+                    </div>
+                </div>
+            </li>
+        </ul>
+
     </section>
 
 
     <script src="./js/Tween.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
-    <script src="//at.alicdn.com/t/font_493487_0lgy1tsh62inewmi.js"></script>
+    <script src="//at.alicdn.com/t/font_493487_ail04skpd5o.js"></script>
     <script src="./js/av-min.js"></script>
     <script src="./js/sticky-topbar.js"></script>
     <script src="./js/auto-slide-up.js"></script>
