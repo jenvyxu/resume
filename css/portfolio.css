@@ -34,15 +34,12 @@ section.portfolio>.workWrapper::after{
     transform: translateX(50%);
 }
 
-section.portfolio>.workWrapper>.splitline{
-
-}
 section.portfolio>.workWrapper .everyWork{
     min-height: 200px;
     width: 92%;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     background: #fff;
-    border-top: 5px solid red;
+    border-top: 5px solid #e6686d;
     margin-bottom: 25px;
     padding: 20px 20px 50px 20px;
     display: flex;
@@ -57,11 +54,16 @@ section.portfolio>.workWrapper .everyWork h3{
     font-size: 20px;}
 section.portfolio>.workWrapper .everyWork h4{
     font-size: 14px;}
+section.portfolio>.workWrapper .everyWork img:hover{
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
 section.portfolio>.workWrapper>.leftWork>.everyWork{
     position: relative;
-
 }
-section.portfolio>.workWrapper>.leftWork::after{
+
+section.portfolio>.workWrapper>.leftWork>.everyWork::after{
     content: '';
     display: block;
     width: 8px;
@@ -69,10 +71,12 @@ section.portfolio>.workWrapper>.leftWork::after{
     background: #e6686d;
     position: absolute;
     top: 76px;
-    right: -4px;
+    right: -9.7%;
     border-radius: 50%;
     z-index: 1;
 }
+
+section.portfolio>.workWrapper>.leftWork{}
 section.portfolio>.workWrapper>.leftWork>.everyWork>.innerWorkWrapper{}
 section.portfolio>.workWrapper>.leftWork>.everyWork>.arrow{
     position: absolute;
@@ -92,15 +96,15 @@ section.portfolio>.workWrapper>.leftWork>.everyWork>.arrow::after{
 section.portfolio>.workWrapper>.rightWork>.everyWork{
     position: relative;
 }
-section.portfolio>.workWrapper>.rightWork::after{
+section.portfolio>.workWrapper>.rightWork>.everyWork::after{
     content: '';
     display: block;
     width: 8px;
     height: 8px;
     background: #e6686d;
     position: absolute;
-    top: 143px;
-    left: -4px;
+    top: 76px;
+    left: -9.6%;
     border-radius: 50%;
     z-index: 1;
 }
