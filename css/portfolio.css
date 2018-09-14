@@ -1,0 +1,144 @@
+section.portfolio>.workWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    height: auto;
+}
+section.portfolio>.workWrapper>.leftWork{
+    width: 50%;
+    position: relative;
+
+}
+
+section.portfolio>.workWrapper>.rightWork{
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-top: 60px;
+    margin-right: 0;
+    position: relative;
+
+
+}
+section.portfolio>.workWrapper::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 52%;
+    width: 4px;
+    background: #edd4d5;
+    margin-top: 60px;
+    right:50%;
+    transform: translateX(50%);
+}
+
+section.portfolio>.workWrapper>.splitline{
+
+}
+section.portfolio>.workWrapper .everyWork{
+    min-height: 200px;
+    width: 92%;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    background: #fff;
+    border-top: 5px solid red;
+    margin-bottom: 25px;
+    padding: 20px 20px 50px 20px;
+    display: flex;
+    color: #1a1a1a;
+}
+section.portfolio>.workWrapper .everyWork p{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #797e87;
+}
+section.portfolio>.workWrapper .everyWork h3{
+    font-size: 20px;}
+section.portfolio>.workWrapper .everyWork h4{
+    font-size: 14px;}
+section.portfolio>.workWrapper>.leftWork>.everyWork{
+    position: relative;
+
+}
+section.portfolio>.workWrapper>.leftWork::after{
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #e6686d;
+    position: absolute;
+    top: 76px;
+    right: -4px;
+    border-radius: 50%;
+    z-index: 1;
+}
+section.portfolio>.workWrapper>.leftWork>.everyWork>.innerWorkWrapper{}
+section.portfolio>.workWrapper>.leftWork>.everyWork>.arrow{
+    position: absolute;
+    top:60px;
+    right:-12px;
+    width: 12px;
+    height: 40px;
+    background: url("../img/arrows.png") no-repeat -18px 0px ;
+}
+section.portfolio>.workWrapper>.leftWork>.everyWork>.arrow::after{
+    content: '';
+    display: block;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 10px solid #fff;
+}
+section.portfolio>.workWrapper>.rightWork>.everyWork{
+    position: relative;
+}
+section.portfolio>.workWrapper>.rightWork::after{
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #e6686d;
+    position: absolute;
+    top: 143px;
+    left: -4px;
+    border-radius: 50%;
+    z-index: 1;
+}
+section.portfolio>.workWrapper>.rightWork>.everyWork>.arrow{
+    position: absolute;
+    top:60px;
+    left:-12px;
+    width: 12px;
+    height: 40px;
+    background: url("../img/arrows.png") no-repeat 0px 0px ;
+}
+section.portfolio>.workWrapper>.rightWork>.everyWork>.arrow::after{
+    content: '';
+    display: block;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 10px solid #fff;
+}
+
+
+
+
+
+section.portfolio>.workWrapper>.leftWork>.everyWork::after{
+
+}
+
+
+section.portfolio>.workWrapper>.rightWork>.everyWork::after{
+
+}
+
+
+section.portfolio>.workWrapper>.leftWork>.work1{
+    width: 92%;
+}
+
+
+
+section.portfolio>.workWrapper>.rightWork>.work3{
+}

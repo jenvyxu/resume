@@ -24,10 +24,14 @@ ol,ul{
     margin: 0px;
     padding: 0px;
 }
+html{
+
+}
 body{
     background: #efefef;
     color:black;
     margin: 0;
+
 }
 .icon {
     width: 1em;
@@ -51,11 +55,7 @@ body{
     display:flex;
 }
 .topNavBar{
-   /* padding-right: 16px;
-    padding-left: 16px;
-    padding-top: 28px;
-    padding-bottom: 12px;*/
-    /*上右下左padding: 18px 16px 12px 16px;*/
+    background:white;
     color: #b7b7b7;
     position: fixed;
     top: 0;
@@ -64,21 +64,28 @@ body{
     transition: all 0.5s;/*所有动画1秒完成*/
     padding: 18px 16px 12px 16px;
 }
+.topNavBar>.inner-topbar>.logo{
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+.inner-topbar{
+    max-width: 940px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
 .topNavBar.sticky{
     background: white;
     z-index: 1;
     padding:10px 16px 6px 16px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
     color: #3d4451;
-}
-.topNavBar-inner{
-    padding:0px 16px 0px 16px;
 }
 
 .topNavBar nav>ul{
     list-style: none;/*去掉列表前面的点*/
-    margin: 0;
-    margin-right: 30px;
     padding-top: 2px;
     padding-bottom: 2px;
 }
@@ -87,13 +94,15 @@ body{
     margin-left: 22px;
     margin-right: 22px;
     position: relative;
+    text-align: right;
+    cursor: pointer;
 }
 
 .topNavBar nav>ul>li>a{
-    font-size: 12px;
+
+    font-size: 16px;
     color: inherit;
     text-decoration: none;/*去掉下划线*/
-    font-weight: bold;/*字体加错*/
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;/*不加会右移*/
     padding-top: 5px;
@@ -112,6 +121,7 @@ body{
     height:3px;
     background: #e06567;
     animation: menuSlide .3s;
+
 }
 @keyframes menuSlide {
     0%{
@@ -125,6 +135,7 @@ body{
     top:100%;
     background: white;
     color: #3d4451;
+    box-shadow: 2 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 .topNavBar li.active >.submenu{
     display: block;
@@ -170,15 +181,17 @@ body{
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;/*有宽度的div水平居中*/
-    background-color: #ffffff;
+    background: #ffffff;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
 }
 .userCard .welcome{
     background-color: #e6686a;
+    left: 30px;
+    font-weight: bold;
     color: white;
     display: inline-block;/*内联元素不接受宽高，可以改成inline-block*/
     /*设置宽高从内往外做*/
-    line-height: 22px;/*保险起见，有些显示器不一定是22px行高*/
+    line-height: 12px;/*保险起见，有些显示器不一定是22px行高*/
     position: relative;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -199,16 +212,20 @@ body{
     left: 14px;/*如何定位三角形*/
   }
   .userCard .picture{
-      float: left;
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.4);
   }
   .userCard .text{
-      float: left;
-      margin-left: 65px;
       width: 470px;
+      margin-right: 50px;
   }
+
   .userCard .textAndPicture{
       padding: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
+
   .userCard .text h1{
       margin-top: 10px;
   }
@@ -216,7 +233,7 @@ body{
     height: 0px;
     border: none;
     border-top: 1px solid #dedede;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .userCard dl dt,
 .userCard dl dd{
@@ -240,7 +257,6 @@ body{
     line-height: 30px;
     padding: 5px;
     border-radius: 50%;
-    
     margin: 20px 40px;
     
 }
@@ -302,37 +318,7 @@ section.message>h2{
     text-align: center;
     margin-bottom: 20px;
 }
-section.skills >ol{
-    background: white;
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
-    padding: 42px 50px 10px;
-}
-section.skills >ol>li{
-    width: 46%;
-    float: left;/*父元素高度固定，子元素可以写百分比*/
-}
-section.skills >ol>li:nth-child(even){
-    float: right;
-}
 
-section.skills .progressBar{
-    height: 5px;
-    background: #fae1e1;
-    border-radius: 2px;
-    margin: 4px 0px 40px;
-    overflow: hidden;
-}
-section.skills .progressBar .progress{
-    background: #e6686a;
-    height:100%;
-    width: 70%;
-    border-radius: 2px;
-    transform: translateX(0);
-    transition: all 1s;
-}
-section.skills.offset .progressBar .progress{
-    transform: translateX(-100%);
-}
 section.skills h3{font-size: 14px;line-height: 1.1;padding-right: 40px;margin: 0px;font-weight: normal;}
 section.portfolio{text-align: center;max-width: 940px;}
 section.portfolio .swiper-container {
@@ -362,6 +348,39 @@ section.portfolio .swiper-button-next{
     padding: 9px 0;
 }
 
+section.skills>.skillDescription{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px;
+    background: #fff;
+}
+section.skills>.skillDescription h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: #e6686d;
+}
+section.skills>.skillDescription>li{
+
+    width: 30%;
+    margin-bottom: 50px;
+}
+section.skills>.skillDescription>li>p{
+    color: #797e87;
+}
+section.skills>.skillDescription>li>.sk-bar{
+    width:100%;
+    height:5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: #d8dadc;
+}
+section.skills>.skillDescription>li>.sk-bar.sk1{width: 50%}
+section.skills>.skillDescription>li>.sk-bar.sk2{width: 60%}
+section.skills>.skillDescription>li>.sk-bar.sk3{width: 70%}
+section.skills>.skillDescription>li>.sk-bar.sk4{width: 30%}
+section.skills>.skillDescription>li>.sk-bar.sk5{width: 90%}
+section.skills>.skillDescription>li>.sk-bar.sk6{width: 80%}
 section.portfolio .swiper-button-prev{
     left:806px;
 }
@@ -470,4 +489,90 @@ section.message>ul{
     margin-top: 20px;
     font-size: 12px;
     color: #6B6B6B;
+}
+
+
+
+/* quick grid */
+.container {
+    width: 93%;
+    margin: auto;
+}
+
+/* Bootstrap-style columns */
+.column {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    width: 25%;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    /* Space between tiles */
+    margin-top: 8px;
+}
+
+.col-span {
+    width: 50%;
+}
+
+.my-sizer-element {
+    width: 8.33333%;
+}
+
+/* default styles so shuffle doesn't have to set them (it will if they're missing) */
+.my-shuffle {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure images take up the same space when they load */
+/* https://vestride.github.io/Shuffle/images */
+.aspect {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.aspect__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.aspect--16x9 {
+    padding-bottom: 56.25%;
+}
+
+.aspect--9x80 {
+    padding-bottom: calc(112.5% + 8px);
+}
+
+.aspect--32x9 {
+    padding-bottom: calc(28.125% - 3px);
+}
+
+img {
+    display: block;
+    width: 100%;
+
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Small reset */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
 }

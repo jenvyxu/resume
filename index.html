@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/portfolio.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <title>许振威的个人简历</title>
+    <title>About Me</title>
 </head>
 <body>
 <div class="ball"></div>
@@ -46,6 +48,9 @@
                         <a href="#comment">留言</a>
                     </li>
                     <li>
+                        <a href="#comment">简历</a>
+                    </li>
+                    <li>
                         <a href="https://jenvyxu.github.io/index.html" target="_blank">博客</a>
                     </li>
                 </ul>
@@ -58,11 +63,9 @@
 
     </div>
     <main>
-        <div data-x id="siteAbout" class="userCard ">
+        <div data-x id="siteAbout" class="userCard" >
             <div class="textAndPicture clearfix">
-                <div class="picture">
-                    <img src="./img/avatar.jpg" alt="头像">
-                </div>
+
                 <div class="text">
                     <span class="welcome">Hello
                         <span class="triangle"></span>
@@ -77,9 +80,15 @@
                         <dd>广州</dd>
                         <dt>邮箱</dt>
                         <dd>1272117264@qq.com</dd>
-                        <dt>手机</dt>
-                        <dd>18316304477</dd>
+                        <dt>QQ</dt>
+                        <dd>1272117264</dd>
+                        <dt>Wechat</dt>
+                        <dd>xuzhenwei111</dd>
+
                     </dl>
+                </div>
+                <div class="picture">
+                    <img src="./img/avatar.jpg" style="width:220px;height: 300px;">
                 </div>
             </div>
             <footer class="media">
@@ -95,68 +104,124 @@
                 </a>
             </footer>
         </div>
-        <p class="downloadResume-wrapper">
-           <a class="downloadResume" href="./resume.pdf" target="_blank" download>下载PDF简历</a><!--强制下载-->    
-        </p>
-        <p class="selfIntroduction">
-            毕业于大连海事大学，本科专业通信工程，目前正在寻找合适的前端开发岗位
-            <br> 如果贵司觉得我的能力符合的要求，可以点击上面的下载PDF简历按钮，查看更加详细的信息
-        </p>
 
     </main>
+
     <section data-x id="siteSkill" class="skills">
         <h2>技能</h2>
-        <div id="main" style="width: 600px;height:400px;"></div>
-        <ol class="clearfix">
+        <div id="radar">
+
+        </div>
+        <ul class="skillDescription">
             <li>
-                <h3>HTML 5</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 90%;"></div>
-                </div>
+                <h3>HTML5 & CSS3</h3>
+                <div class="sk1 sk-bar"></div>
+                <p>perspective 属性指定了观察者与z=0平面的距离，
+                    使具有三维位置变换的元素产生透视效果。z>0的三维元素比正常大，而z<0时则比正常小，大小程度由该属性的值决定。</p>
             </li>
             <li>
-                <h3>JavaScript</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 65%;"></div>
-                </div>
+                <h3>HTML5 & CSS3</h3>
+                <div class="sk2 sk-bar"></div>
+                <p>perspective 属性指定了观察者与z=0平面的距离，
+                    使具有三维位置变换的元素产生透视效果。</p>
             </li>
             <li>
-                <h3>jQuery</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 50%;"></div>
-                </div></li>
-            <li>
-                <h3>CSS3</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 90%;"></div>
-                </div>
+                <h3>VUE</h3>
+                <div class="sk3 sk-bar"></div>
+                <p>perspective 属性指定了观察者与z=0平面的距离</p>
             </li>
             <li>
-                <h3>React.js</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 70%;"></div>
-                </div>
+                <h3>MVC</h3>
+                <div class="sk4 sk-bar"></div>
+                <p>perspective 属性指定了观察者与z=0平面的距离，
+                    使具有三维位置变换的元素产生透视效果。z>0的三维元素比正常大</p>
             </li>
             <li>
-                <h3>Vue.js</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 80%;"></div>
-                </div>
+                <h3>WEBPACK</h3>
+                <div class="sk5 sk-bar"></div>
+                <p>perspective 属性指定了观察者与z=0平面的距离，
+                    使具有三维位置变换的元素产生透视效果。z>0的三维元素比正常大，而z<0时则比正常小。</p>
             </li>
-        </ol>
+            <li>
+                <h3>HTML5 & CSS3</h3>
+                <div class="sk6 sk-bar"></div>
+                <p>perspective 属性指定了观察者与z=0平面的距离，
+                    使具有三维位置变换的元素产生透视效果。z>0的三维元素比正常大，而z<0时则比正常小，大小程度由该属性的值决定。</p>
+            </li>
+        </ul>
     </section>
     <section data-x id="siteWork" class="portfolio">
         <h2>作品集</h2>
-        <div id="mySlides" class="works">
+        <div class="workWrapper">
+            <div class="leftWork">
+                <div class="work1 everyWork">
+                    <div class="innerWorkWrapper">
+                        <h3>项目名称</h3>
+                        <h4>关键字：Vue jQuery</h4>
+                        <p>Worked as part of a multi-disciplinary team,
+                            carrying out ad-hoc tasks as requested by the IT Manager. Had a specific brief to ensure the
+                            websites build for customer’s precisely
+                            matched their requirements.developers
+                            and marketers.</p>
+                        <img src="./img/2.jpg" alt="">
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+                <div class="work1 everyWork">
+                    <div class="innerWorkWrapper">
+                        <h3>项目名称</h3>
+                        <h4>关键字：Vue jQuery</h4>
+                        <p>Worked as part of a multi-disciplinary team,
+                            carrying out ad-hoc tasks as requested by the IT Manager. Had a specific brief to ensure the
+                            websites build for customer’s precisely
+                            matched their requirements.developers
+                            and marketers.</p>
+                        <img src="./img/2.jpg" alt="">
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="rightWork">
+                <div class="work3 everyWork">
+                    <div class="arrow"></div>
+                    <div class="innerWorkWrapper">
+                        <h3>项目名称</h3>
+                        <h4>关键字：Vue jQuery</h4>
+                        <p>Worked as part of a multi-disciplinary team,
+                            carrying out ad-hoc tasks as requested by the IT Manager. Had a specific brief to ensure the
+                            websites build for customer’s precisely
+                            matched their requirements.developers
+                            and marketers.</p>
+                        <img src="./img/2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="work4 everyWork">
+                    <div class="arrow"></div>
+                    <div class="innerWorkWrapper">
+                        <h3>项目名称</h3>
+                        <h4>关键字：Vue jQuery</h4>
+                        <p>Worked as part of a multi-disciplinary team,
+                            carrying out ad-hoc tasks as requested by the IT Manager. Had a specific brief to ensure the
+                            websites build for customer’s precisely
+                            matched their requirements.developers
+                            and marketers.</p>
+                        <img src="./img/2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<!--        <div id="mySlides" class="works">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <img class="swiper-slide" src="./img/works/nav-page.jpg" alt="#">
                     <img class="swiper-slide" src="./img/works/canvas.jpg" alt="#">
                     <img class="swiper-slide" src="./img/works/slides.jpg" alt="#">
                 </div>
-                <!-- 如果需要分页器 -->
-               <!-- <div class="swiper-pagination"></div>-->
-
+                &lt;!&ndash; 如果需要分页器 &ndash;&gt;
+               &lt;!&ndash; <div class="swiper-pagination"></div>&ndash;&gt;
             </div>
             <div class="swiper-button-prev">
                 <svg class="icon" aria-hidden="true">
@@ -168,9 +233,10 @@
                     <use xlink:href="#icon-next"></use>
                 </svg>
             </div>
-        </div>
+        </div>-->
     </section>
-    
+
+
     <section data-x id="comment" class="message">
         <h2>留言</h2>
         <form id="postMessageForm">
@@ -196,13 +262,18 @@
     </section>
 
 
-
-
-<script src="https://unpkg.com/scrollreveal">
-        ScrollReveal().reveal('.headline');
-    </script>
     <script src="./js/Tween.js"></script>
+    <script src="node_modules/vanilla-tilt/dist/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script src="js/shuffle.min.js">
+        var Shuffle = window.Shuffle;
+
+        var myShuffle = new Shuffle(document.querySelector('.my-shuffle'), {
+            itemSelector: '.js-item',
+            sizer: '.my-sizer-element',
+            buffer: 1,
+        });
+    </script>
     <script src="//at.alicdn.com/t/font_493487_ail04skpd5o.js"></script>
     <script src="./js/av-min.js"></script>
     <script src="./js/sticky-topbar.js"></script>
@@ -211,50 +282,22 @@
     <script src="./js/init-swiper.js"></script>
     <script src="./js/message.js"></script>
     <script src="js/echarts.js"></script>
-    <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
+    <script src="js/skills.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/background.js"></script>
+<script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".picture"), {
+        reverse:            false,  // reverse the tilt direction
+        max:                15,     // max tilt rotation (degrees)
+        perspective:        3000,   // Transform perspective, the lower the more extreme the tilt gets.
+        scale:              1.05,      // 2 = 200%, 1.5 = 150%, etc..
+        speed:              300,    // Speed of the enter/exit transition
+        transition:         true,   // Set a transition on enter/exit.
+        axis:               null,   // What axis should be disabled. Can be X or Y.
+        reset:              true ,   // If the tilt effect has to be reset on exit.
+        glare:              true,   // if it should have a "glare" effect
 
-        // 指定图表的配置项和数据
-        var option = {
-
-            tooltip: {},
-
-            radar: {
-                // shape: 'circle',
-                name: {
-                    textStyle: {
-                        color: '#fff',
-                        backgroundColor: '#999',
-                        borderRadius: 3,
-                        padding: [3, 5]
-                    }
-                },
-                indicator: [
-                    { name: 'JavaScript', max: 6500},
-                    { name: 'HTML5', max: 16000},
-                    { name: 'jQuery', max: 30000},
-                    { name: 'Vue', max: 38000},
-                    { name: 'CSS3', max: 52000},
-                ]
-            },
-            series: [{
-                name: '预算 vs 开销（Budget vs spending）',
-                type: 'radar',
-                // areaStyle: {normal: {}},
-                data : [
-                    {
-                        value : [4300, 10000, 28000, 35000, 50000, 19000],
-                        name : '预算分配（Allocated Budget）'
-                    },
-
-                ]
-            }]
-        };
-
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-    </script>
-<script src="js/background.js"></script>
+    });
+</script>
 </body>
 </html>
