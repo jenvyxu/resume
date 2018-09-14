@@ -1,0 +1,96 @@
+section.message{
+
+}
+
+#postMessageForm{
+    background: #ffffff;
+    padding: 40px 80px;
+    max-width: 940px;
+    margin: 20px auto 10px auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+#postMessageForm>input[name]{
+    border-radius: 5px;
+    width: 200px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 5px;
+    border:1px solid #c7ccd3;
+}
+#postMessageForm>input[name]:focus{
+    border:1px solid #e6686d;
+}
+#postMessageForm>.content{
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px 8px;
+    resize: none;
+    border:1px solid #c7ccd3;
+    font-size: 16px;
+    line-height: 16px;
+}
+#postMessageForm>.content:focus{
+    border:1px solid #e6686d;
+}
+#postMessageForm>.submit{
+    height: 30px;
+    width: 80px;
+    color: white;
+    margin-left: 700px;
+    margin-top:10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 5px;
+    background: #c4c4c4;
+}
+#postMessageForm>.submit:hover{
+    background: #e6686d;
+    cursor: pointer;
+}
+
+
+#messageList>li{
+    position: relative;
+    width: 100%;
+    margin:0 auto;
+    background-color: #FFFFFF;
+    display: flex;
+    padding: 15px 80px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+}
+#messageList>li:hover{
+    transform: translateX(5px) scale(1.02);
+    transition: 0.3s;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    z-index: 1;
+}
+#messageList>li>.nameAndMessage{
+    width: 100%;
+}
+#messageList>li>.nameAndMessage>.nameAndTime{
+    display: flex;
+    margin-bottom: 8px;
+    justify-content: space-between;
+
+}
+#messageList>li>.nameAndMessage>.nameAndTime>.name{
+    font-size: 16px;
+    font-weight: bolder;
+    color: #e6686d;
+}
+#messageList>li>.nameAndMessage>.inner-message{
+    font-size: 14px;
+    border-radius: 4px;
+    word-wrap:break-word;
+    min-height: 22px;
+}
+
+.nameAndTime>.time{
+    font-size: 12px;
+    color: #6B6B6B;
+}
