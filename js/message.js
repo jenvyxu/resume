@@ -42,14 +42,10 @@
             var query = new AV.Query('Message');
             this.model.fetch().then(
                     (messages)=>{
-                        console.log(messages)
                         let array=messages.map((item)=>item.attributes)
-                        console.log(array
-                    )
                         array.forEach((item)=>{
                             let li=document.createElement('li')
                             let string=` 
-                                <div id="guest"><img src="./img/guest.jpg" alt=""></div>
                                      <div class="nameAndMessage">
                                             <div class="nameAndTime">
                                             <div class="name">${item.name}</div>
@@ -82,7 +78,6 @@
                 let div=document.createElement('div')
                 let messageList=document.querySelector('#messageList')
                 let string=`  
-                   <div id="guest"><img src="./img/guest.jpg" alt=""></div>
                 <div class="nameAndMessage">
                     <div class="nameAndTime">
                         <div class="name">${object.attributes.name}</div>
@@ -99,6 +94,7 @@
         },
     }
 controller.init(view,model)
+
 }.call()
 
 
