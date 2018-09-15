@@ -1,0 +1,9 @@
+#radar{
+    margin:0 auto 0 auto;
+    width: 600px;
+    height: 400px;
+}
+.skills>.skillDescription{
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    margin-top: 30px;
+}

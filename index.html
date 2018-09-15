@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./works.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="background.css">
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/message.css">
+    <script src="//at.alicdn.com/t/font_493487_5k8ef8dq9qv.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <title>About Me</title>
+    <title>许振威的简历</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-<div class="ball"></div>
     <div id="topNavBar" class="topNavBar">
         <div class="inner-topbar">
             <div class="logo moving-letters">
                     <h1 class="ml1">
                       <span class="text-wrapper">
-                        <span class="line line1"></span>
                         <span class="letters">RESUME</span>
-                        <span class="line line2"></span>
                       </span>
                     </h1>
             </div>
@@ -35,20 +34,20 @@
                         <a href="#siteSkill">技能</a>
                     </li>
                     <li>
-                        <a href="#siteWork">作品</a>
+                        <a href="#siteWork">项目</a>
                         <ul class="submenu">
-                            <li>键盘导航</li>
-                            <li>Canvas画板</li>
-                            <li>CSS画皮卡丘</li>
-                            <li>仿网易云音乐播放器</li>
-                            <li>Vue简历编辑器</li>
+                            <li><a href="">键盘导航</a></li>
+                            <li><a href="">Canvas画板</a></li>
+                            <li><a href="">CSS画皮卡丘</a></li>
+                            <li><a href="">仿网易云音乐播放器</a></li>
+                            <li><a href="">Vue简历编辑器</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#comment">留言</a>
                     </li>
                     <li>
-                        <a href="#comment">简历</a>
+                        <a href="./resume.pdf" target="_blank">简历</a>
                     </li>
                     <li>
                         <a href="https://jenvyxu.github.io/index.html" target="_blank">博客</a>
@@ -56,16 +55,11 @@
                 </ul>
             </nav>
         </div>
-
     </div>
-<div class="background"></div>
-    <div class="banner" >
-
-    </div>
+    <div class="banner" ></div>
     <main>
         <div data-x id="siteAbout" class="userCard" >
             <div class="textAndPicture clearfix">
-
                 <div class="text">
                     <span class="welcome">Hello
                         <span class="triangle"></span>
@@ -78,12 +72,12 @@
                         <dd>26</dd>
                         <dt>城市</dt>
                         <dd>广州</dd>
-                        <dt>邮箱</dt>
-                        <dd>1272117264@qq.com</dd>
                         <dt>QQ</dt>
                         <dd>1272117264</dd>
                         <dt>Wechat</dt>
                         <dd>xuzhenwei111</dd>
+                        <dt>Email</dt>
+                        <dd>1272117264@qq.com</dd>
 
                     </dl>
                 </div>
@@ -99,14 +93,28 @@
                 </a>
                 <a href="https://jenvyxu.github.io/index.html" target="_blank">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-blog"></use>
+                        <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                </a>
+                <a href="https://jenvyxu.github.io/index.html" target="_blank">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
+                <a href="https://jenvyxu.github.io/index.html" target="_blank">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-juejin"></use>
+                    </svg>
+                </a>
+                <a href="https://jenvyxu.github.io/index.html" target="_blank">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
                     </svg>
                 </a>
             </footer>
         </div>
 
     </main>
-
     <section data-x id="siteSkill" class="skills">
         <h2>技能</h2>
         <div id="radar">
@@ -116,42 +124,38 @@
             <li>
                 <h3>HTML5 & CSS3</h3>
                 <div class="sk1 sk-bar"></div>
-                <p>perspective 属性指定了观察者与z=0平面的距离，
-                    使具有三维位置变换的元素产生透视效果。z>0的三维元素比正常大，而z<0时则比正常小，大小程度由该属性的值决定。</p>
+                <p>根据HTML5编写具有语义化的文档结构，比如nav、header、footer、aside、main等，熟悉CSS常见布局方法和技巧，
+                能够百分百还原设计稿</p>
             </li>
             <li>
-                <h3>HTML5 & CSS3</h3>
+                <h3>响应式页面</h3>
                 <div class="sk2 sk-bar"></div>
-                <p>perspective 属性指定了观察者与z=0平面的距离，
-                    使具有三维位置变换的元素产生透视效果。</p>
+                <p>会使用媒体查询功能和REM方法设计移动端页面</p>
             </li>
             <li>
-                <h3>VUE</h3>
+                <h3>Javascript</h3>
                 <div class="sk3 sk-bar"></div>
-                <p>perspective 属性指定了观察者与z=0平面的距离</p>
+                <p>在不使用框架的情况情况下，可以使用原生JS和常见API实现需求</p>
             </li>
             <li>
                 <h3>MVC</h3>
                 <div class="sk4 sk-bar"></div>
-                <p>perspective 属性指定了观察者与z=0平面的距离，
-                    使具有三维位置变换的元素产生透视效果。z>0的三维元素比正常大</p>
+                <p>熟悉MVC设计模式，并能够应用到项目中</p>
             </li>
             <li>
                 <h3>WEBPACK</h3>
                 <div class="sk5 sk-bar"></div>
-                <p>perspective 属性指定了观察者与z=0平面的距离，
-                    使具有三维位置变换的元素产生透视效果。z>0的三维元素比正常大，而z<0时则比正常小。</p>
+                <p>有webpac项目打包经验，会使用webpack提供插件和loader</p>
             </li>
             <li>
-                <h3>HTML5 & CSS3</h3>
+                <h3>VUE</h3>
                 <div class="sk6 sk-bar"></div>
-                <p>perspective 属性指定了观察者与z=0平面的距离，
-                    使具有三维位置变换的元素产生透视效果。z>0的三维元素比正常大，而z<0时则比正常小，大小程度由该属性的值决定。</p>
+                <p>熟悉Vue常用功能，如组件、Vue-router、双向绑定等，并使用VUE做过独立项目</p>
             </li>
         </ul>
     </section>
     <section data-x id="siteWork" class="portfolio">
-        <h2>作品集</h2>
+        <h2>项目</h2>
         <div class="workWrapper">
             <div class="leftWork">
                 <div class="work1 everyWork">
@@ -210,43 +214,18 @@
                 </div>
             </div>
         </div>
-
-
-
-<!--        <div id="mySlides" class="works">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <img class="swiper-slide" src="./img/works/nav-page.jpg" alt="#">
-                    <img class="swiper-slide" src="./img/works/canvas.jpg" alt="#">
-                    <img class="swiper-slide" src="./img/works/slides.jpg" alt="#">
-                </div>
-                &lt;!&ndash; 如果需要分页器 &ndash;&gt;
-               &lt;!&ndash; <div class="swiper-pagination"></div>&ndash;&gt;
-            </div>
-            <div class="swiper-button-prev">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-pre"></use>
-                </svg>
-            </div>
-            <div class="swiper-button-next">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-next"></use>
-                </svg>
-            </div>
-        </div>-->
     </section>
-
-
     <section data-x id="comment" class="message">
         <h2>留言</h2>
+
         <form id="postMessageForm">
-            <input class="name" type="text" name="name" placeholder="昵称">
+            <input class="name" type="text" name="name" placeholder="昵称" autocomplete="off">
             <textarea class="content" name="content" id="" cols="30" rows="10" placeholder="留言"></textarea>
             <input type="submit" class="submit" value="发表">
         </form>
+
         <ul id="messageList">
             <li >
-                <div id="guest"><img src="./img/guest.jpg" alt=""></div>
                 <div class="nameAndMessage">
                     <div class="nameAndTime">
                         <div class="name">JenvyXU</div>
@@ -260,44 +239,66 @@
         </ul>
 
     </section>
-
-
     <script src="./js/Tween.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="node_modules/vanilla-tilt/dist/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
-    <script src="js/shuffle.min.js">
-        var Shuffle = window.Shuffle;
 
-        var myShuffle = new Shuffle(document.querySelector('.my-shuffle'), {
-            itemSelector: '.js-item',
-            sizer: '.my-sizer-element',
-            buffer: 1,
-        });
-    </script>
-    <script src="//at.alicdn.com/t/font_493487_ail04skpd5o.js"></script>
     <script src="./js/av-min.js"></script>
     <script src="./js/sticky-topbar.js"></script>
     <script src="./js/auto-slide-up.js"></script>
     <script src="./js/smoothly-navigation.js"></script>
-    <script src="./js/init-swiper.js"></script>
     <script src="./js/message.js"></script>
     <script src="js/echarts.js"></script>
     <script src="js/skills.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/background.js"></script>
-<script type="text/javascript">
-    VanillaTilt.init(document.querySelector(".picture"), {
-        reverse:            false,  // reverse the tilt direction
-        max:                15,     // max tilt rotation (degrees)
-        perspective:        3000,   // Transform perspective, the lower the more extreme the tilt gets.
-        scale:              1.05,      // 2 = 200%, 1.5 = 150%, etc..
-        speed:              300,    // Speed of the enter/exit transition
-        transition:         true,   // Set a transition on enter/exit.
-        axis:               null,   // What axis should be disabled. Can be X or Y.
-        reset:              true ,   // If the tilt effect has to be reset on exit.
-        glare:              true,   // if it should have a "glare" effect
+    <script src="js/scroll-animate.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".picture"), {
+            reverse:            false,
+            max:                15,
+            perspective:        3000,
+            scale:              1.05,
+            speed:              300,
+            transition:         true,
+            axis:               null,
+            reset:              true ,
+            glare:              true,
 
-    });
-</script>
+        });
+    </script>
+    <script>
+        var ml = { timelines: {}};
+        $('.ml1 .letters').each(function(){
+            $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+        });
+        ml.timelines["ml1"] = anime.timeline({loop: true})
+            .add({
+                targets: '.ml1 .letter',
+                scale: [0.3,1],
+                opacity: [0,1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 600,
+                delay: function(el, i) {
+                    return 70 * (i+1)
+                }
+            }).add({
+                targets: '.ml1 .line',
+                scaleX: [0,1],
+                opacity: [0.5,1],
+                easing: "easeOutExpo",
+                duration: 700,
+                offset: '-=875',
+                delay: function(el, i, l) {
+                    return 80 * (l - i);
+                }
+            }).add({
+                targets: '.ml1',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+    </script>
 </body>
 </html>
