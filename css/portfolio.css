@@ -2,8 +2,29 @@ section.portfolio>.workWrapper{
     display: flex;
     justify-content: space-between;
 }
+
+section.portfolio>.workWrapper .everyWork>.innerWorkWrapper{
+    min-width: 392px;
+}
+section.portfolio>.workWrapper .everyWork>.innerWorkWrapper>a{
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    display: block;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+section.portfolio>.workWrapper .everyWork>.innerWorkWrapper h4{
+    margin:5px 5px;
+}
+section.portfolio>.workWrapper .everyWork>.innerWorkWrapper span{
+    display: inline-block;
+    margin: 0 1px;
+    color: #e6686d;
+    padding: 0px 4px;
+}
 img{
     height: auto;
+    transition: 0.4s;
 }
 section.portfolio>.workWrapper>.leftWork{
     width: 50%;
@@ -26,12 +47,13 @@ section.portfolio>.workWrapper::after{
     content: '';
     display: block;
     position: absolute;
-    height: 52%;
+    height: 62.5%;
     width: 4px;
     background: #edd4d5;
-    margin-top: 60px;
+    margin-top: 85px;
     right:50%;
     transform: translateX(50%);
+    z-index: -1;
 }
 
 section.portfolio>.workWrapper .everyWork{
@@ -49,14 +71,15 @@ section.portfolio>.workWrapper .everyWork p{
     margin-bottom: 20px;
     margin-top: 20px;
     color: #797e87;
+    text-align: left;
 }
 section.portfolio>.workWrapper .everyWork h3{
     font-size: 20px;}
 section.portfolio>.workWrapper .everyWork h4{
     font-size: 14px;}
 section.portfolio>.workWrapper .everyWork img:hover{
-    transform: scale(1.02);
-    transition: 0.3s;
+    transform: scale(1.1);
+    transition: 0.4s;
 }
 
 section.portfolio>.workWrapper>.leftWork>.everyWork{

@@ -248,12 +248,12 @@ body{
     color: #3d4451;
 }
 .userCard dl dt{
-    width: 30%;
+    width: 20%;
     font-weight: bold;
     font-size: 15px;
 }
 .userCard dl dd{
-    width: 70%;
+    width: 80%;
     color: #9da0a7;
 }
 .userCard >footer.media{
@@ -363,18 +363,7 @@ section.skills>.skillDescription>li>.sk-bar{
     margin-bottom: 20px;
     background: #d8dadc;
 }
-section.skills>.skillDescription>li>.sk-bar.sk1{width: 85%}
-section.skills>.skillDescription>li>.sk-bar.sk2{width: 70%}
-section.skills>.skillDescription>li>.sk-bar.sk3{width: 70%}
-section.skills>.skillDescription>li>.sk-bar.sk4{width: 60%}
-section.skills>.skillDescription>li>.sk-bar.sk5{width: 70%}
-section.skills>.skillDescription>li>.sk-bar.sk6{width: 75%}
-section.portfolio .swiper-button-prev{
-    left:806px;
-}
-section.portfolio .swiper-button-next{
-    right: 18px;
-}
+
 
 section.portfolio .icon{
 

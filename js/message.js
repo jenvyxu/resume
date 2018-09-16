@@ -32,12 +32,12 @@
             this.view=view
             this.model=model
             this.messageList=view.querySelector('#messageList')
-            console.log(this.messageList)
             this.form=view.querySelector('form')
             this.model.init()
             this.loadMessages()
             this.bindEvents()
         },
+
         loadMessages:function(){
             var query = new AV.Query('Message');
             this.model.fetch().then(
@@ -74,7 +74,10 @@
             let month=Number(myDate.getMonth())+1
             let time=month+'/'+myDate.getDate()+'/'+myDate.getFullYear()+' ' +myDate.toString().substring(15,24)
             this.model.save(name,content,time).then(
+
+
                 function(object) {
+                    console.log(2)
                 let div=document.createElement('div')
                 let messageList=document.querySelector('#messageList')
                 let string=`  
@@ -86,11 +89,14 @@
                     <div class="inner-message">${object.attributes.content}
                     </div>
                 </div>`
-                let li=document.createElement('li')
+
+                    let li=document.createElement('li')
                 li.innerHTML=string
                 messageList.appendChild(li)
-                myform.querySelector('input[name=content]').value=''
-            })
+                    myform.querySelector('#postMessageForm>input[name=name]').value=''
+                    myform.querySelector('#postMessageForm>textarea[name=content]').value=''
+
+                })
         },
     }
 controller.init(view,model)

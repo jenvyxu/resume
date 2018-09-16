@@ -1,4 +1,5 @@
 !function(){
+
     var view=document.querySelector('nav.menu')
     var controller={
         view:null,
@@ -36,7 +37,7 @@
         bindEvents:function(){
             let aTags=view.querySelectorAll('nav.menu > ul > li > a')
             let liTags=view.querySelectorAll('nav.menu>ul>li')
-            for(let i=0;i<aTags.length;i++){
+            for(let i=0;i<aTags.length-2;i++){ //最后两个a标签例外
                 aTags[i].onclick=(x)=>{
                     x.preventDefault()
                     let a=x.currentTarget;
