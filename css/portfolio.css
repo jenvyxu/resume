@@ -147,25 +147,3 @@ section.portfolio>.workWrapper>.rightWork>.everyWork>.arrow::after{
     border-right: 10px solid #fff;
 }
 
-
-
-
-
-section.portfolio>.workWrapper>.leftWork>.everyWork::after{
-
-}
-
-
-section.portfolio>.workWrapper>.rightWork>.everyWork::after{
-
-}
-
-
-section.portfolio>.workWrapper>.leftWork>.work1{
-    width: 92%;
-}
-
-
-
-section.portfolio>.workWrapper>.rightWork>.work3{
-}

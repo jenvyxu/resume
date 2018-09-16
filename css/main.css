@@ -171,16 +171,6 @@ body{
     padding-bottom: 6px;
 }
 
-.banner{
-    height: 515px;
-    /*background-position: center center;背景上下左右居中*/
-    background-position: center center;
-    background-size: cover;/*div背景图按比例缩放*/
-}
-.banner .mask{
-    height: 515px;
-    background-color: rgba(0, 0, 0, 0.6);
-}
 .userCard{
     max-width: 940px;
     margin-left: auto;
@@ -277,10 +267,6 @@ body{
     fill: white;
     vertical-align: top;/*是图标上下空位一样*/
 }
-body >main{
-    margin-top: -340px;
-}
-
 .selfIntroduction{
     max-width: 940px;
     margin-left: auto;
