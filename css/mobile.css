@@ -2,6 +2,9 @@
     body{
         min-width:10rem;
     }
+    main{
+        margin-top: 0;
+    }
     .topNavBar{
         min-width: 10rem;
         position:relative;
