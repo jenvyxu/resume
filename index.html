@@ -14,7 +14,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
         let pageWidth=window.innerWidth
-        document.write('<style>html{font-size:'+pageWidth/10+'px;}</style>')
+        if(pageWidth<=500){
+            document.write('<style>html{font-size:'+pageWidth/10+'px;}</style>')
+        }
+
     </script>
     <title>关于我</title>
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -62,7 +65,6 @@
         </nav>
     </div>
 </div>
-<div class="banner"></div>
 <main>
     <div data-x id="siteAbout" class="userCard" >
         <div class="textAndPicture clearfix">
