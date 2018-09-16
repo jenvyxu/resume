@@ -1,5 +1,4 @@
 !function(){
-
     var view=document.querySelector('nav.menu')
     var controller={
         view:null,
