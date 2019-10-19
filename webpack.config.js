@@ -4,10 +4,19 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/js/app.js',
+    // entry: {
+    //     slideUp:'./src/js/model/auto-slide-up.js',
+    //     message:'./src/js/model/message.js',
+    //     scroll:'./src/js/model/scroll-animate.js',
+    //     skills:'./src/js/model/skills.js',
+    //     navigation:'./src/js/model/smoothly-navigation.js',
+    //     topbar:'./src/js/model/sticky-topbar.js',
+    // },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
+    stats: { children: false },
     devtool: 'inline-source-map',
     mode: 'development',
     devServer: {
@@ -44,7 +53,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader", "postcss-loader"]
+                use: ["style-loader", "css-loader","postcss-loader"]
             }
         ]
 
