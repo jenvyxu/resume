@@ -1,0 +1,69 @@
+.skills .skills-wrapper {
+    width: 100%;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+#radar {
+    margin: 0 auto 0 auto;
+    width: 100%;
+    min-height: 400px;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+section.skills .skillDescription {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px;
+    background: #fff;
+}
+
+section.skills .skillDescription h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e6686d;
+}
+
+section.skills .skillDescription>li {
+    width: 30%;
+    margin-bottom: 50px;
+}
+
+section.skills .skillDescription>li>p {
+    color: #797e87;
+}
+
+section.skills .skillDescription>li>.sk-bar {
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: #d8dadc;
+}
+
+section.skills .skillDescription .sk-bar.sk1 {
+    width: 82%
+}
+
+section.skills .skillDescription .sk-bar.sk2 {
+    width: 85%
+}
+
+section.skills .skillDescription .sk-bar.sk3 {
+    width: 88%
+}
+
+section.skills .skillDescription .sk-bar.sk4 {
+    width: 60%
+}
+
+section.skills .skillDescription .sk-bar.sk5 {
+    width: 70%
+}
+
+section.skills .skillDescription .sk-bar.sk6 {
+    width: 80%
+}

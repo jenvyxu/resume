@@ -1,0 +1,101 @@
+.allMessage {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    background-color: #fff;
+}
+
+.messageForm {
+    background: #fff;
+    padding: 40px 80px;
+    max-width: 940px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.messageForm .nameAndBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.messageForm .content,
+.messageForm input[name] {
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid #e5e9ef;
+    background-color: #f4f5f7;
+    font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+.messageForm input[name]:focus,
+.messageForm .content:focus {
+    border: 1px solid #e6686d;
+}
+
+.messageForm .content {
+    height: 100px;
+    padding: 10px 8px;
+    resize: none;
+    line-height: 16px;
+    letter-spacing: 1px;
+}
+
+.messageForm input[name] {
+    width: 180px;
+    padding: 5px 8px;
+}
+
+.coutnAndBtn .count {
+    color: #aaa;
+    margin-right: 16px;
+    padding: 5px;
+}
+
+.messageForm .submit-btn {
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 20px;
+    background: #c4c4c4;
+    cursor: pointer;
+}
+
+.messageForm .submit-btn:disabled {
+    cursor: not-allowed;
+}
+
+.messageForm .submit-btn:hover {
+    background: #e6686d;
+}
+
+.messageList li {
+    position: relative;
+    margin: 0 auto;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    margin: 0 80px;
+    padding: 16px 8px 10px 8px;
+}
+
+.messageList .nameAndMessage .name {
+    font-size: 13px;
+    font-weight: bold;
+    color: #e6686d;
+    margin: 4px 0;
+}
+
+.messageList .nameAndMessage .inner-message {
+    font-size: 14px;
+    border-radius: 4px;
+    word-wrap: break-word;
+    min-height: 22px;
+    margin: 6px 0;
+}
+
+.messageList .nameAndMessage .time {
+    font-size: 12px;
+    color: #6B6B6B;
+    margin: 4px 0;
+}
