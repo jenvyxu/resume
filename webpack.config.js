@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     entry: './src/js/app.js',
@@ -18,7 +19,7 @@ module.exports = {
     },
     stats: { children: false },
     devtool: 'inline-source-map',
-    mode: 'development',
+    mode: 'production',
     devServer: {
         contentBase: './dist'
     },
@@ -28,7 +29,14 @@ module.exports = {
             filename: 'index.html',
             template: 'src/index.html'
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // all options are optional
+            filename: '[name].css',
+            chunkFilename: '[id].css',
+            ignoreOrder: false, // Enable to remove warnings about conflicting order
+          }),
     ],
     module: {
         rules: [{
@@ -53,8 +61,22 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader","postcss-loader"]
+                use: [          
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                        // you can specify a publicPath here
+                        // by default it uses publicPath in webpackOptions.output
+                        outputPath: "assets/",
+                        publicPath: './assets',
+                        hmr: process.env.NODE_ENV === 'development',
+                        },
+                    },
+                    // "style-loader", 
+                    "css-loader",
+                    "postcss-loader"]
             }
+        
         ]
 
     },
