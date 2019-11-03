@@ -1,7 +1,6 @@
 import 'css/main.css'
 import 'css/message.css'
 import 'css/portfolio.css'
-import 'css/mobile.css'
 
 import 'js/model/sticky-topbar.js'
 import 'js/model/skills.js'
